@@ -1,6 +1,7 @@
 #include "ogg_encoder.h"
 
 #include <stdlib.h>
+#include <string.h>
 
 #include "ogg/vorbis/vorbisenc.h"
 
@@ -21,6 +22,8 @@ struct _OGGEncoder {
 
 OGGEncoder* OGGEncoder_new(int sampleRate, int channels, int quality, BytesOutputCallback dataCallback, void* userData) {
 	OGGEncoder* state = malloc(sizeof(OGGEncoder));
+	memset(state, 0, sizeof(OGGEncoder));
+
 	vorbis_info_init(&state->vi);
 
 	state->channels = channels;

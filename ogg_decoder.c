@@ -27,6 +27,7 @@ struct _OGGDecoder {
 
 OGGDecoder* OGGDecoder_new(FramesOutputCallback dataCallback, void* userData) {
 	OGGDecoder* state = malloc(sizeof(OGGDecoder));
+	memset(state, 0, sizeof(OGGDecoder));
 
 	ogg_sync_init(&state->oy);
 
