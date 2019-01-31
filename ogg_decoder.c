@@ -223,7 +223,7 @@ int OGGDecoder_processDataInternal(OGGDecoder* state, void* data, int length) {
 	return 0;
 }
 
-int OGGDecoder_writeData(OGGDecoder* state, void* data, int length) {
+int OGGDecoder_writeData(OGGDecoder* state, const void* data, int length) {
 	int pos = 0;
 
 	while (pos != length) {

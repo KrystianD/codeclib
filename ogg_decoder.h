@@ -17,7 +17,7 @@ void OGGDecoder_free(OGGDecoder* state);
 int OGGDecoder_getSampleRate(OGGDecoder* state);
 int OGGDecoder_getChannelsCount(OGGDecoder* state);
 
-int OGGDecoder_writeData(OGGDecoder* state, void* data, int length);
+int OGGDecoder_writeData(OGGDecoder* state, const void* data, int length);
 void OGGDecoder_finalize(OGGDecoder* state);
 
 #ifdef __cplusplus
